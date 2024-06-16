@@ -4,10 +4,10 @@ pipeline {
     environment {
         // Please update your own registry here
         REGISTRY = 'mgt-harbor.datainsights.sa'
-        REGISTRY_IMAGE = "$REGISTRY/private/jenkins-example"
+        REGISTRY_IMAGE = "$REGISTRY/mgt-proj/jenkins-example"
         DOCKERFILE_PATH = 'Dockerfile'
 
-        REGISTRY_USER = credentials('registryUser')
+        REGISTRY_USER = admin
         REGISTRY_PASSWORD = credentials('registryPassword')
 
         CURRENT_BUILD_NUMBER = "${currentBuild.number}"
