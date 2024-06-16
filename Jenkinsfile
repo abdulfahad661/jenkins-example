@@ -7,7 +7,7 @@ pipeline {
         REGISTRY_IMAGE = "$REGISTRY/mgt-proj/jenkins-example"
         DOCKERFILE_PATH = 'Dockerfile'
 
-        REGISTRY_USER = admin
+        REGISTRY_USER = credentials('registryUser')
         REGISTRY_PASSWORD = credentials('registryPassword')
 
         CURRENT_BUILD_NUMBER = "${currentBuild.number}"
